@@ -1,0 +1,12 @@
+<div class="dashboard-grid-container">
+  <div class="dashboard-grid-areas">
+    <div class="dashboard-grid-area-container" ng-repeat="item in compare">
+      <div class="dashboard-grid-area-block" ng-style="blockColor($index)"></div>
+      <div class="dashboard-grid-area-text">{{item.name}}</div>
+    </div>
+  </div>
+
+  <div class="listing" ng-style="columns">
+    <div ng-repeat="item in cards | orderBy:'-group'" class="grid-item" grid-block data="item" ng-click="goToDetail(item)"></div>
+  </div>
+</div>

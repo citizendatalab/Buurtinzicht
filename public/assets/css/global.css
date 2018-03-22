@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'VAGRoundedBold';
+  src: url('../fonts/VagRoundedBold.eot');
+  src: url('../fonts/VagRoundedBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'VAGRoundedLight';
+  src: url('../fonts/VagRoundedLight.eot');
+  src: url('../fonts/VagRoundedLight.woff') format('woff'),
+       url('../fonts/VagRoundedLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('../fonts/Karla-Regular.ttf') format('truetype');
+}
+
+
+body, html {
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Karla';
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.view {
+  height: 100%;
+}

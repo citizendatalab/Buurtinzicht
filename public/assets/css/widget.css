@@ -1,0 +1,389 @@
+.bi-widget-cards {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+
+.bi-widget-info-container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bi-widget-info-body {
+  width: 80%;
+  top: 50%;
+  margin: 0 auto;
+  padding: 10px;
+          transform:translateY(-50%);
+      -ms-transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+  background-color: #fff;
+  position: relative;
+}
+
+.bi-widget-info-header {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.bi-widget-info-header p {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'VAGRoundedBold';
+  letter-spacing: 1px;
+}
+
+.bi-widget-info-content a {
+  color: #2eaadc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bi-widget-info-close {
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  background-image: url('../icons/close.png');
+  background-size: cover;
+}
+
+.bi-widget-info-close:hover {
+  background-image: url('../icons/close-black.png');
+  cursor: pointer;
+}
+
+.bi-widget-card {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 15px;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.bi-widget-card-header {
+  width: 100%
+}
+
+.bi-widget-card-header-title {
+  width: 100%;
+  min-height: 30px;
+}
+
+.bi-widget-card-header-buttons {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.bi-widget-card-header-button-question {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  float: right;
+}
+
+.bi-widget-card-header-button-question {
+  background-image: url('../icons/question.png');
+  background-size: cover;
+}
+
+.bi-widget-card-header-button-question:hover {
+  background-image: url('../icons/question-blue.png');
+  cursor: pointer;
+}
+
+.bi-widget-card-header-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.bi-widget-card-header-title p {
+  margin: 0;
+  margin-right: 50px;
+  font-size: 24px;
+  font-family: 'VAGRoundedBold';
+  letter-spacing: 1px;
+}
+
+.bi-widget-card-header-definition {
+  width: 100%;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.bi-widget-card-header-views {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.bi-widget-card-header-view {
+  width: auto;
+  height: 30px;
+  margin: 10px 10px 10px 0;
+  padding: 0 15px 0 15px;
+  display: inline;
+  float: left;
+  border: 1px solid #2eaadc;
+  border-radius: 50px;
+}
+
+.bi-widget-card-header-view:hover {
+  background-color: rgba(46, 170, 220, 0.6);
+  cursor: pointer;
+}
+
+.bi-widget-card-header-view.bi-active {
+  color: #fff;
+  background-color: #2eaadc;
+}
+
+.bi-widget-card-header-view p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.bi-widget-body {
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.bi-widget-graph {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.bi-widget-graph mapbox {
+  height: 169px;
+  visibility: hidden;
+}
+
+.bi-highlight-text {
+  background-color: #fff;
+}
+
+.bi-widget-map {
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+}
+
+.bi-widget-legend-container {
+  width: 150px;
+  height: 100%;
+  position: relative;
+}
+
+.bi-widget-legend {
+  margin-top: 10px;
+}
+
+.bi-widget-legend-item {
+  width: 150px;
+  height: 25px;
+  float:left;
+}
+
+.bi-widget-legend-item-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 7.5px;
+  border-radius: 50%;
+  background-color: #9e9e9e;
+  float: left;
+}
+
+.bi-widget-legend-item-label {
+  height: 25px;
+  margin-left: 10px;
+  float: left;
+}
+
+.bi-widget-legend-item-label p {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.bi-widget-map-container {
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.bi-widget-popup {
+  pointer-events: none;
+}
+
+.bi-widget-feedback {
+  width: 100%;
+  height: 100px !important;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 10px;
+  border-top: 1px solid #2eaadc;
+  border-bottom: 1px solid #2eaadc;
+  /*font-size: 14px;*/
+}
+
+.bi-widget-feedback-info {
+  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.bi-widget-feedback-text {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+}
+
+.bi-widget-feedback-comment {
+  width: 300px;
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.bi-widget-feedback-select {
+  width: 100%;
+  height: 30px;
+}
+
+.bi-widget-feedback-option {
+  width: 30px;
+  height: 20px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+  line-height: 20px;
+}
+
+.bi-widget-feedback-option:hover {
+  color: rgba(46, 170, 220, 0.6);
+  cursor: pointer;
+}
+
+.bi-widget-feedback-divider {
+  width: 5px;
+  height: 30px;
+  float: left;
+  line-height: 30px;
+}
+
+.bi-selected {
+  color: #2eaadc;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bi-selected-false {
+  color: #95a5a6;
+}
+
+.bi-widget-feedback-option-text {
+  width: auto;
+  height: 30px;
+  float: left;
+  line-height: 30px;
+}
+
+.bi-widget-feedback-textarea {
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+
+.bi-widget-feedback-textarea textarea {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  border: #2eaadc;
+  resize: none;
+  font-size: 14px;
+}
+
+/*.bi-widget-feedback-confirm {
+  width: 100%;
+  height: 44px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}*/
+
+.bi-widget-feedback-submit {
+  height: 30px;
+}
+
+.bi-widget-feedback-submit-button {
+  width: auto;
+  height: 20px;
+  margin-top: 5px;
+  padding: 0 15px 0 15px;
+  display: inline;
+  float: right;
+  border: 1px solid #2eaadc;
+  border-radius: 50px;
+  line-height: 20px;
+}
+
+.bi-widget-feedback-submit-button:hover {
+  background-color: rgba(46, 170, 220, 0.6);
+  cursor: pointer;
+}
+
+.bi-widget-link {
+  width: 100%;
+  height: 20px;
+  font-size: 13px;
+}
+
+.bi-widget-link a {
+  color: #2eaadc;
+  font-weight: bold;
+  text-decoration: none;
+}

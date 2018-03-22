@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+  <base href="/">
+
+  <link href="assets/libs/leaflet/dist/leaflet.css" rel="stylsheet">
+  <link href="assets/libs/mapbox.js/mapbox.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  <link href="assets/css/global.css" rel="stylesheet">
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+  <link href="assets/css/widget.css" rel="stylesheet">
+  <link href="assets/css/d3.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div ui-view class="view"></div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/libs/angular/angular.js"></script>
+  <script src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="assets/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  <script src="assets/libs/mapbox.js/mapbox.js"></script>
+
+  <!-- ANGULAR -->
+  <script src="app/app.modules.js"></script>
+  <script src="app/app.routes.js"></script>
+
+  <!-- CONTROLLERS -->
+  <script src="app/components/dashboard/dashboard.controller.js"></script>
+  <script src="app/components/dashboard/views/detail.controller.js"></script>
+  <script src="app/components/dashboard/views/cards.controller.js"></script>
+
+  <!-- SERVICES -->
+  <script src="app/components/dashboard/dashboard.services.js"></script>
+  <script src="app/components/shared/d3/d3.services.js"></script>
+
+  <!-- SHARED -->
+  <script src="app/components/shared/d3/d3.modules.js"></script>
+  <script src="app/components/shared/d3/grid.directives.js"></script>
+  <script src="app/components/shared/d3/detail.directives.js"></script>
+  <script src="app/components/shared/d3/widget.directives.js"></script>
+  <script src="app/components/shared/mapbox/mapbox.directive.js"></script>
+  <script src="app/components/shared/widget/widget.controller.js"></script>
+  <script src="app/components/shared/widget/widget.services.js"></script>
+
+</body>
+
+</html>

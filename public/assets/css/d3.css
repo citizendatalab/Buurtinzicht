@@ -1,0 +1,27 @@
+line-chart {
+  position: relative;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #333;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1px;
+}
+
+.tooltip {
+  padding: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.bar-cards {
+  fill: #E6E6E9;
+}

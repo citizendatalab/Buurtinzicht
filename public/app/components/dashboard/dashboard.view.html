@@ -1,0 +1,58 @@
+<div class="dashboard-container">
+
+    <mapbox class="dashboard-map" callback="map">
+      <div class="dashboard-map-title">
+        <p>Buurtinzicht</p>
+      </div>
+      <div class="dashboard-map-areas">
+        <div class="dashboard-map-area" ng-repeat="item in compare">
+          <div class="dashboard-map-area title" ng-click="removeCompare(item.code)">
+            <div class="dashboard-map-area-close">x</div>
+            <div class="dashboard-map-area-text">{{item.name}}</div>
+          </div>
+        </div>
+        <div class="dashboard-map-area add" ng-style="compareActive()" ng-click="addCompare()">
+          <div class="dashboard-map-area-close">+</div>
+          <div class="dashboard-map-area-text">Vergelijk met:</div>
+        </div>
+
+      </div>
+      <div class="dashboard-map-instructions">
+        <p>Zoom in en uit op de kaart om verschillende niveaus te bekijken</p>
+      </div>
+    </mapbox>
+
+    <div class="dashboard-body">
+
+      <div class="dashboard-menu">
+        <div class="dashboard-menu-themes" ng-class="{ 'active': selectedTheme === item.short }"  ng-repeat="item in themes" ng-click="selectTheme(item)">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+
+      <div ng-show="showWelcome" class="dashboard-welcome">
+        <div class="dashboard-welcome-text">
+          <p>
+            Buurtinzicht</a> is een initiatief van het <a href="http://www.citizendatalab.org/" target="_blank">Citizen Data Lab</a>
+            (HvA, UvA, VU en CWI) en werkt nauw samen met het <a href="https://www.datalabamsterdam.nl/" target="_blank">DataLab</a> van de gemeente Amsterdam.
+            Het doel van Buurtinzicht is lokale stedelijke netwerken te versterken door ze te voorzien van relevante informatie over hun omgeving.
+            Daarnaast willen we gebruikers van data betrekken in de discussie over de kansen en bedreigingen van de data-maatschappij.
+          </p>
+          <p>Via de kaart kan een gebied geselecteerd worden. Door in en uit te zoomen verander je het gebiedsniveau, waarbij Amsterdam als hoogste
+            niveau geld en de individuele buurten als laagste. Daarnaast is het mogelijk om gebieden met elkaar te vergelijken door op de
+            <span>Vergelijk met ...</span> knop te klikken. Vervolgens kun je op de kaart een extra gebied selecteren.
+          </p>
+          <p>
+            Er zijn vier thema's waarop gefilterd kan worden. Voor gedetaillerde informatie van een bepaalde statistiek binnen een thema
+            kan je op een van de statistieken klikken.
+          </p>
+        </div>
+      </div>
+
+      <div ng-show="!showWelcome" class="dashboard-data">
+        <div ui-view class="dashboard-data-view"></div>
+      </div>
+
+    </div>
+
+</div>

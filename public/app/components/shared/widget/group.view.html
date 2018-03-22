@@ -1,0 +1,88 @@
+<div class="bi-widget-cards" id="bi-widget-cards">
+
+  <div class="bi-widget-info-container" ng-show="showInfo">
+    <div class="bi-widget-info-body">
+      <div class="bi-widget-info-header">
+        <div class="bi-widget-info-close" ng-click="showInfo = !showInfo">
+        </div>
+        <p>Buurtinzicht</p>
+      </div>
+      <div class="bi-widget-info-content">
+        <p>Deze grafiek is bedoeld om je te helpen goed ge&#149;nformeerde keuzes te maken.
+          De bron is open-data van de gemeente Amsterdam. Zoals je ziet is de informatie waar je misschien nieuwsgierig naar bent vaak nog niet beschikbaar.
+          Dat vinden we niet erg. We kiezen er bewust voor de beschikbare informatie aan te bieden en dan samen met de gebruikers en de gemeente
+          het aanbod van informatie stap voor stap verbeteren.
+        </br>  </br>
+        <a href="http://www.buurtinzicht.nl" target="_blank">Buurtinzicht</a> is een initiatief van het <a href="http://www.citizendatalab.org/" target="_blank">Citizen Data Lab</a>
+        (HvA, UvA, VU en CWI) en werkt nauw samen met het <a href="https://www.datalabamsterdam.nl/" target="_blank">DataLab</a> van de gemeente Amsterdam.
+        Het doel van Buurtinzicht is lokale stedelijke netwerken te versterken door ze te voorzien van relevante informatie over hun omgeving.
+        Daarnaast willen we gebruikers van data betrekken in de discussie over de kansen en bedreigingen van de data-maatschappij.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bi-widget-card">
+    <div class="bi-widget-card-header" id="bi-widget-card-header">
+      <div class="bi-widget-card-header-title">
+        <div class="bi-widget-card-header-buttons">
+          <div class="bi-widget-card-header-button-bubble">
+          </div>
+          <div class="bi-widget-card-header-button-question" ng-click="showInfo = !showInfo">
+          </div>
+        </div>
+        <p>{{ widgetData.group.label}} in {{ widgetData.area.name }}</p>
+      </div>
+      <div class="bi-widget-card-header-views">
+        <div class="bi-widget-card-header-view" ng-click="selectView('pie')" ng-class="{'bi-active': activeView === 'pie'}">
+          <p>Verdeling</p>
+        </div>
+        <div class="bi-widget-card-header-view" ng-click="selectView('stackedarea')" ng-class="{'bi-active': activeView === 'stackedarea'}">
+          <p>Historisch</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bi-widget-body">
+      <div widget-pie-chart class="bi-widget-graph" data="widgetData" ng-show="activeView === 'pie'"></div>
+      <div widget-stacked-chart class="bi-widget-graph" data="widgetData" ng-show="activeView === 'stackedarea'"></div>
+    </div>
+
+    <div class="bi-widget-feedback">
+      <div class="bi-widget-feedback-info">
+        <div class="bi-widget-feedback-text">
+          <p>Heeft deze grafiek u een beter inzicht gegeven in uw buurt?</p>
+        </div>
+      </div>
+      <div class="bi-widget-feedback-comment">
+        <div class="bi-widget-feedback-select">
+          <div class="bi-widget-feedback-option" ng-click="selectOption(true)" ng-class="activeOption(true)">
+            Ja
+          </div>
+          <div class="bi-widget-feedback-divider" ng-class="activeOption()">
+            /
+          </div>
+          <div class="bi-widget-feedback-option" ng-click="selectOption(false)" ng-class="activeOption(false)">
+            Nee
+          </div>
+          <div class="bi-widget-feedback-option-text">
+            , want...
+          </div>
+          <div class="bi-widget-feedback-submit-button" ng-click="submitFeedback()">
+            <p>Verzenden</p>
+          </div>
+        </div>
+        <div class="bi-widget-feedback-textarea">
+          <textarea ng-model="selectedOption.text">
+          </textarea>
+          <!-- <div class="bi-widget-feedback-confirm">
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="bi-widget-link">
+      <p>Powered by <a href="http://www.buurtinzicht.nl" target="_blank">Buurtinzicht</a></p>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="dashboard-detail">
+
+  <div class="dashboard-detail-content">
+
+    <div class="dashboard-detail-title">
+      <p ng-if="!details.group">{{ details.label }}</p>
+      <p ng-if="details.group">{{ details.label }}</p>
+    </div>
+
+    <div class="dashboard-detail-graph" ng-if="!details.group" detail-single data="details"></div>
+    <div class="dashboard-detail-graph" ng-if="details.group" detail-group data="details"></div>
+
+    <div class="dashboard-detail-definition">
+      <p ng-if="!details.group">{{ details.definition }}</p>
+      <p ng-if="details.group">{{ details.definition }}</p>
+    </div>
+
+  </div>
+
+  <div class ="dashboard-detail-return" ng-click="goToReturn()">
+    <p>Terug</p>
+  </div>
+</div>

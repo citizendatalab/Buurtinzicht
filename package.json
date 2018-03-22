@@ -1,0 +1,25 @@
+{
+  "name": "buurtinzicht",
+  "version": "0.4.4",
+  "description": "NodeJS Template",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Buurtinzicht",
+    "Open Data",
+    "Amsterdam"
+  ],
+  "author": "Guido Jansen",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.15.0",
+    "csv": "^0.4.6",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.3",
+    "morgan": "^1.6.1",
+    "terraformer": "^1.0.6"
+  }
+}
